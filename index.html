@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Splitty: split the bill</title>
+  <meta name="description" content="A tiny bill splitter whose README is verified by Kane CLI.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <header>
+      <h1>Splitty</h1>
+      <p class="tagline">Split the bill, tip included. Every claim in its README is checked by <a href="https://www.testmuai.com/kane-cli/">Kane CLI</a>.</p>
+    </header>
+
+    <form id="split-form" novalidate>
+      <label for="bill">Bill</label>
+      <div class="money"><span>$</span><input id="bill" name="bill" type="number" inputmode="decimal" min="0" step="0.01" placeholder="0.00"></div>
+
+      <label for="tip">Tip %</label>
+      <div class="row">
+        <input id="tip" name="tip" type="number" inputmode="decimal" min="0" max="100" step="1" value="15">
+        <div class="chips" role="group" aria-label="Quick tip">
+          <button type="button" data-tip="10">10%</button>
+          <button type="button" data-tip="15">15%</button>
+          <button type="button" data-tip="20">20%</button>
+        </div>
+      </div>
+
+      <label for="people">People</label>
+      <input id="people" name="people" type="number" inputmode="numeric" min="1" step="1" value="2">
+
+      <label class="check"><input id="round-up" name="roundUp" type="checkbox"> Round up to whole dollars</label>
+    </form>
+
+    <section aria-live="polite">
+      <p id="error" class="error" role="alert" hidden></p>
+      <div id="result" class="result" hidden>
+        <p id="each" class="each"></p>
+        <p id="breakdown" class="breakdown"></p>
+      </div>
+    </section>
+
+    <footer>
+      <a href="https://github.com/good1uck/docproof">Source on GitHub</a> · MIT
+    </footer>
+  </main>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
