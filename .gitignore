@@ -1,0 +1,7 @@
+node_modules/
+.docproof/
+.testmuai/evidence/
+.testmuai/variables/
+secrets/
+*.evidence
+.env

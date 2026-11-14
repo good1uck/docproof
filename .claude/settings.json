@@ -1,0 +1,11 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "hooks": [
+          { "type": "command", "command": "node bin/docproof.mjs hook claude", "timeout": 900 }
+        ]
+      }
+    ]
+  }
+}

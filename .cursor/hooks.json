@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "hooks": {
+    "stop": [
+      { "command": "node bin/docproof.mjs hook cursor" }
+    ]
+  }
+}
