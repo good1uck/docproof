@@ -1,0 +1,7 @@
+{"type":"stream_start","cli_version":"0.10.4","surface":"testmd","v":1}
+{"step":1,"status":"running","remark":"Opening the app"}
+{"step":1,"status":"done","remark":"Page loaded"}
+{"type":"run_end","status":"passed","summary":"Opened the app","credits_consumed":3}
+{"step":2,"status":"failed","remark":"Bill field shows empty, expected 80"}
+{"type":"run_end","status":"failed","summary":"Bill input is empty","reason":"assertion failed","test_url":"https://example.test/tc/1","credits_consumed":5}
+{"type":"test_md_done","overall_status":"failed","duration_s":41.2,"session_id":"s1"}
