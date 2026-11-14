@@ -1,0 +1,30 @@
+name: ci
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: npm test
+      - name: Replay the committed Kane CLI run (no credits needed)
+        run: if [ -d proof/latest ]; then npm run proof:replay; else echo "no recorded Kane run committed yet"; fi
+  kane:
+    # Real Kane CLI run. Add LT_USERNAME and LT_ACCESS_KEY as repository secrets to enable it.
+    runs-on: ubuntu-latest
+    needs: unit
+    env:
+      LT_USERNAME: ${{ secrets.LT_USERNAME }}
+      LT_ACCESS_KEY: ${{ secrets.LT_ACCESS_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+        if: env.LT_USERNAME != ''
+      - uses: actions/setup-node@v4
+        if: env.LT_USERNAME != ''
+        with: { node-version: 22 }
+      - if: env.LT_USERNAME != ''
+        run: npm install -g @testmuai/kane-cli && npm run proof
+      - if: always() && env.LT_USERNAME != ''
+        uses: actions/upload-artifact@v4
+        with: { name: docproof-report, path: .docproof/ }
