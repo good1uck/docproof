@@ -1,0 +1,19 @@
+{
+  "name": "docproof",
+  "version": "0.1.0",
+  "description": "Your README makes promises. Kane CLI checks them in a real browser, and failures go straight back to your coding agent.",
+  "type": "module",
+  "license": "MIT",
+  "bin": { "docproof": "bin/docproof.mjs" },
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node scripts/start.mjs",
+    "test": "node --test test/*.test.mjs",
+    "proof": "node bin/docproof.mjs check",
+    "proof:watch": "node bin/docproof.mjs watch",
+    "proof:replay": "node bin/docproof.mjs check --replay proof/latest",
+    "extract": "node bin/docproof.mjs extract"
+  },
+  "repository": { "type": "git", "url": "git+https://github.com/good1uck/docproof.git" },
+  "keywords": ["kane-cli", "testmu", "e2e", "readme", "ai-agent", "claude-code", "cursor"]
+}
