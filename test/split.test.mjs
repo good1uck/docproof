@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { computeSplit, formatMoney, validate } from '../app/split.js';
+import { computeSplit, formatMoney, parseShare, shareQuery, validate } from '../app/split.js';
 
 test('splits a bill with tip', () => {
   const r = computeSplit({ bill: 120, tipPct: 15, people: 4 });
@@ -29,4 +29,17 @@ test('validation messages', () => {
 
 test('no floating point drift', () => {
   assert.equal(formatMoney(computeSplit({ bill: 33.33, tipPct: 18, people: 3 }).each), '$13.11');
+});
+
+test('reads a shared split from the query string', () => {
+  assert.deepEqual(parseShare('?bill=80&tip=20&people=3'), { bill: '80', tip: '20', people: '3' });
+  assert.deepEqual(parseShare('?bill=abc&people=&round=1'), { roundUp: true });
+  assert.deepEqual(parseShare(''), {});
+});
+
+test('builds a share query that round-trips', () => {
+  const q = shareQuery({ bill: '80', tip: '20', people: '3' });
+  assert.equal(q, '?bill=80&tip=20&people=3');
+  assert.deepEqual(parseShare(q), { bill: '80', tip: '20', people: '3' });
+  assert.equal(shareQuery({ bill: '', tip: '', people: '' }), '');
 });

@@ -33,3 +33,30 @@ export function computeSplit({ bill, tipPct, people, roundUp = false }) {
 export function formatMoney(value) {
   return '$' + value.toFixed(2);
 }
+
+/**
+ * Read a shared split from a query string like "?bill=80&tip=20&people=3".
+ * Only well-formed numeric values are returned, so a bad link never breaks the form.
+ * @param {string} search
+ */
+export function parseShare(search) {
+  const q = new URLSearchParams(search);
+  const out = {};
+  for (const key of ['bill', 'tip', 'people']) {
+    const raw = q.get(key);
+    if (raw != null && raw.trim() !== '' && Number.isFinite(Number(raw))) out[key] = raw.trim();
+  }
+  if (q.get('round') === '1') out.roundUp = true;
+  return out;
+}
+
+/** Build the query string that reproduces the current split. */
+export function shareQuery({ bill, tip, people, roundUp = false }) {
+  const q = new URLSearchParams();
+  if (bill !== '') q.set('bill', bill);
+  if (tip !== '') q.set('tip', tip);
+  if (people !== '') q.set('people', people);
+  if (roundUp) q.set('round', '1');
+  const s = q.toString();
+  return s ? '?' + s : '';
+}
