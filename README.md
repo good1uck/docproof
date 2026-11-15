@@ -30,7 +30,7 @@ README claim ──► docproof extract ──► tests/docproof/<id>_test.md
 
 ## Quick start
 
-Requires Node 20+, Chrome, and a free [TestMu AI account](https://www.testmuai.com/register/) (10,000 Kane CLI credits).
+Requires Node 20+, Chrome, and a free [TestMu AI account](https://www.testmuai.com/register/) with Kane CLI credits. For scale: the first full run of the 5 claims below cost about 150 credits; re-runs that replay Kane's cached steps cost 0 for unchanged claims.
 
 ```bash
 git clone https://github.com/good1uck/docproof && cd docproof
@@ -71,11 +71,11 @@ Put a marker comment above any numbered list. Readers see normal steps; docproof
 - `Open the app` becomes `Open {{app_url}}…` (served locally, or `--url https://your.deploy/`).
 - `You should see X` becomes a Kane assertion: `Verify the page shows X.`
 - `path=?a=1` on the marker appends a path or query string to the app URL.
-- Generated tests are only rewritten when a claim changes, so unchanged claims replay from Kane's cache at zero credits.
+- Generated tests are only rewritten when a claim changes, so unchanged claims replay from Kane's cache at zero credits (seen in [the loop log](docs/LOOP_LOG.md): 4 of 5 claims replayed for 0 credits on the green re-run).
 
 ## Demo app: Splitty
 
-[`app/`](app/) is a small bill splitter built for this project by an AI coding agent. Every list below is a docproof claim, verified by Kane CLI.
+[`app/`](app/) is a small bill splitter built for this project by an AI coding agent. Every list below is a docproof claim, and every one was checked by real Kane CLI runs: the share-link claim was written before the feature existed, Kane failed it, the agent fixed the app from `FIX_PROMPT.md`, and Kane passed all 5 ([loop log](docs/LOOP_LOG.md), [latest report](proof/latest/report.md)).
 
 ### Split a bill
 
@@ -123,8 +123,9 @@ Put a marker comment above any numbered list. Readers see normal steps; docproof
 | `src/kane.mjs` | Runs `kane-cli testmd run --agent`, parses the NDJSON stream |
 | `src/report.mjs` | `report.json` / `report.md` / `FIX_PROMPT.md` |
 | `app/` | Splitty demo app (static, no build) |
-| `tests/docproof/` | Generated Kane tests and their `output-*/` recordings (committed so replays are free) |
+| `tests/docproof/` | Generated Kane tests and Kane's `output-*/Result.md` per claim (Kane's local step cache in `output-*/.internal/` is not committed) |
 | `proof/latest/` | The latest real Kane CLI run: raw NDJSON, exit codes, report |
+| `proof/iter-1-failed/` | The first full Kane CLI run, where `share-link` failed, plus the `FIX_PROMPT.md` it produced |
 | `docs/LOOP_LOG.md` | Each Kane failure, the agent's fix, and the green re-run |
 
 ## How Kane CLI is used
