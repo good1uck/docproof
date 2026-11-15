@@ -1,0 +1,111 @@
+{
+  "tool": "docproof",
+  "appUrl": "http://127.0.0.1:4173/",
+  "startedAt": "2026-11-15T10:49:11.191Z",
+  "finishedAt": "2026-11-15T10:53:47.253Z",
+  "status": "failed",
+  "claims": [
+    {
+      "id": "split-basic",
+      "title": "Split a bill",
+      "source": "README.md:82",
+      "steps": [
+        "Open the app.",
+        "Type \"120\" in \"Bill\", \"15\" in \"Tip %\" and \"4\" in \"People\".",
+        "You should see \"Each person pays $34.50\"."
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "summary": "",
+      "reason": "",
+      "failedStep": null,
+      "durationS": 9,
+      "testUrl": null,
+      "shareUrl": null,
+      "credits": 0,
+      "notSignedIn": false
+    },
+    {
+      "id": "round-up",
+      "title": "Round up",
+      "source": "README.md:89",
+      "steps": [
+        "Open the app.",
+        "Type \"120\" in \"Bill\", \"15\" in \"Tip %\" and \"4\" in \"People\".",
+        "Tick \"Round up to whole dollars\".",
+        "You should see \"Each person pays $35.00\" and \"Collected $140.00\"."
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "summary": "Completed the bill-splitting calculation requested.\nThe payment summary showed that each person pays $35.00.\nThe summary also showed a collected total of $140.00.",
+      "reason": "",
+      "failedStep": null,
+      "durationS": 70,
+      "testUrl": null,
+      "shareUrl": "https://test-manager.lambdatest.com/projects/01M7FD3S92MNX3MHTN8K1PJN5D/test-cases/01M7FD6XGEYVMA398KB0FZNJQ3/dashboard/share/US_JL5EJQEJD0UJ395RIW02F6884VKA73PABU1T0X0OVYDJDRE63B70YVY42RKDFX2N?type=summary&agentView=true&fqdn=summary-page",
+      "credits": 34.8029345,
+      "notSignedIn": false
+    },
+    {
+      "id": "quick-tip",
+      "title": "Quick tip buttons",
+      "source": "README.md:97",
+      "steps": [
+        "Open the app.",
+        "Type \"50\" in \"Bill\" and \"2\" in \"People\".",
+        "Click the \"20%\" button.",
+        "You should see \"Each person pays $30.00\"."
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "summary": "Completed the bill split calculation on the page.\nThe bill summary showed “Each person pays $30.00,” confirming the final per-person amount.",
+      "reason": "",
+      "failedStep": null,
+      "durationS": 62,
+      "testUrl": null,
+      "shareUrl": "https://test-manager.lambdatest.com/projects/01M7FD3S92MNX3MHTN8K1PJN5D/test-cases/01M7FD99N34AK129FBD29ZH9G7/dashboard/share/US_AOSWOWB2YV6BGV6Z2K74LMFH78DFB2857CY4WSONTU0NN1KFKMD721GSRLXJQ6SY?type=summary&agentView=true&fqdn=summary-page",
+      "credits": 36.338354499999994,
+      "notSignedIn": false
+    },
+    {
+      "id": "validation",
+      "title": "Nobody to split with",
+      "source": "README.md:105",
+      "steps": [
+        "Open the app.",
+        "Type \"60\" in \"Bill\" and \"0\" in \"People\".",
+        "You should see the error \"Add at least 1 person\"."
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "summary": "Attempted the requested action on the page.\nThe page displayed the message “Add at least 1 person,” indicating that at least one person must be added before continuing.",
+      "reason": "",
+      "failedStep": null,
+      "durationS": 51,
+      "testUrl": null,
+      "shareUrl": "https://test-manager.lambdatest.com/projects/01M7FD3S92MNX3MHTN8K1PJN5D/test-cases/01M7FDBDEQY16J4SK8QBQK36ER/dashboard/share/US_YRRB05LKUI2P1RL1REVGRVMLLAEAWHVBZCWXR75TXCXPN8VAHBCZYA6EGP36QN9S?type=summary&agentView=true&fqdn=summary-page",
+      "credits": 31.678405999999995,
+      "notSignedIn": false
+    },
+    {
+      "id": "share-link",
+      "title": "Share a split as a link",
+      "source": "README.md:112",
+      "steps": [
+        "Open the app.",
+        "You should see \"80\" in \"Bill\", \"20\" in \"Tip %\" and \"3\" in \"People\".",
+        "You should see \"Each person pays $32.00\"."
+      ],
+      "status": "failed",
+      "exitCode": 1,
+      "summary": "The agent treated the requested values or the address parameters as if they were already shown on the page. The form was left at its visible starting values: bill 0.00, tip 15, and people 2.\nFill the three fields first, then read the displayed values and run the final check.",
+      "reason": "Final verification failed: \"the page shows \"80\" in \"Bill\", \"20\" in \"Tip %\" and \"3\" in \"People\"\"",
+      "failedStep": null,
+      "durationS": 56,
+      "testUrl": null,
+      "shareUrl": "https://test-manager.lambdatest.com/projects/01M7FD3S92MNX3MHTN8K1PJN5D/test-cases/01M7FDD7BS9G2Y13NGH3B8X0BR/dashboard/share/US_W7WM0RI24819TQT870NKXBE8ZGNS8PUF1YAM032XJXBHK324K393LA4T8KBUVKG7?type=summary&agentView=true&fqdn=summary-page",
+      "credits": 19.5511625,
+      "notSignedIn": false
+    }
+  ]
+}
