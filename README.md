@@ -75,7 +75,7 @@ Put a marker comment above any numbered list. Readers see normal steps; docproof
 
 ## Demo app: Splitty
 
-[`app/`](app/) is a small bill splitter built for this project by an AI coding agent. Every list below is a docproof claim, and every one was checked by real Kane CLI runs: the share-link claim was written before the feature existed, Kane failed it, the agent fixed the app from `FIX_PROMPT.md`, and Kane passed all 5 ([loop log](docs/LOOP_LOG.md), [latest report](proof/latest/report.md)).
+[`app/`](app/) is a small bill splitter built for this project by an AI coding agent. Every list below is a docproof claim, and every one was checked by real Kane CLI runs: the share-link claim was written before the feature existed, Kane failed it, the agent fixed the app from `FIX_PROMPT.md`, and Kane passed all 5, locally and again on the [deployed site](https://good1uck.github.io/docproof/) ([loop log](docs/LOOP_LOG.md), [latest report](proof/latest/report.md), [deployed-site report](proof/live/report.md)).
 
 ### Split a bill
 
@@ -125,6 +125,7 @@ Put a marker comment above any numbered list. Readers see normal steps; docproof
 | `app/` | Splitty demo app (static, no build) |
 | `tests/docproof/` | Generated Kane tests and Kane's `output-*/Result.md` per claim (Kane's local step cache in `output-*/.internal/` is not committed) |
 | `proof/latest/` | The latest real Kane CLI run: raw NDJSON, exit codes, report |
+| `proof/live/` | The same 5 claims run by Kane CLI against the deployed GitHub Pages site |
 | `proof/iter-1-failed/` | The first full Kane CLI run, where `share-link` failed, plus the `FIX_PROMPT.md` it produced |
 | `docs/LOOP_LOG.md` | Each Kane failure, the agent's fix, and the green re-run |
 

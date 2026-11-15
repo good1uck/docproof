@@ -6,3 +6,4 @@ secrets/
 *.evidence
 .env
 tests/docproof/output-*/.internal/
+tests/docproof-live/
