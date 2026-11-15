@@ -75,6 +75,13 @@ A new URL means new Kane test cases, so every claim was authored from scratch in
 
 For `share-link`, Kane only read values: it opened `?bill=80&tip=20&people=3`, read the Bill, Tip % and People inputs (80, 20, 3) without typing, then checked "Each person pays $32.00". Raw output: [`proof/live/`](../proof/live/).
 
+## Runs 4 and 5 (recording the demo video): 2026-11-15 11:09:54 to 11:11:59 · PASSED 5/5 both times
+
+Two local `npm run proof` re-runs under `asciinema` for the demo video. Nothing had changed, so all 5 claims replayed from Kane's cache both times. The first recording was discarded because a pipe buffered the output; the second is the one in the video.
+`run_end` reported 0 credits, but the balance still dropped by about 1.5 credits per full run (885.75 to 882.51 for both).
+
+Run 5 sessions: split-basic aaa8ccb3-92f4-4249-8deb-8b946c78c8b6, round-up 9e99d322-f045-4b03-ac03-8c4f6a3a08d3, quick-tip 570436ab-0b26-42e2-9702-9df7ab81f3d9, validation 4b3db356-37ea-4191-b971-4213d2121de3, share-link 74547b89-427a-461b-8e53-c235cdbed1d5.
+
 ## Summary
 
 | Run | Where | Result | Kane-authored | Replayed |
@@ -84,5 +91,6 @@ For `share-link`, Kane only read values: it opened `?bill=80&tip=20&people=3`, r
 | fix | agent edits `app/` from FIX_PROMPT.md | | | |
 | 2 | local | **5/5** | 1 | 4 |
 | 3 | GitHub Pages | **5/5** | 5 | 0 |
+| 4, 5 | local (video) | **5/5**, twice | 0 | 10 |
 
-Total: 1200 to 885.75 credits (about 314) for 16 Kane test runs.
+Total: 1200 to 882.51 credits (about 317) for 26 Kane test runs.

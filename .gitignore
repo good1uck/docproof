@@ -7,3 +7,4 @@ secrets/
 .env
 tests/docproof/output-*/.internal/
 tests/docproof-live/
+video/
