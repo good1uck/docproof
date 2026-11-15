@@ -1,0 +1,111 @@
+{
+  "tool": "docproof",
+  "appUrl": "http://127.0.0.1:4173/",
+  "startedAt": "2026-11-15T10:54:25.529Z",
+  "finishedAt": "2026-11-15T10:55:54.461Z",
+  "status": "passed",
+  "claims": [
+    {
+      "id": "split-basic",
+      "title": "Split a bill",
+      "source": "README.md:82",
+      "steps": [
+        "Open the app.",
+        "Type \"120\" in \"Bill\", \"15\" in \"Tip %\" and \"4\" in \"People\".",
+        "You should see \"Each person pays $34.50\"."
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "summary": "",
+      "reason": "",
+      "failedStep": null,
+      "durationS": 9,
+      "testUrl": null,
+      "shareUrl": null,
+      "credits": 0,
+      "notSignedIn": false
+    },
+    {
+      "id": "round-up",
+      "title": "Round up",
+      "source": "README.md:89",
+      "steps": [
+        "Open the app.",
+        "Type \"120\" in \"Bill\", \"15\" in \"Tip %\" and \"4\" in \"People\".",
+        "Tick \"Round up to whole dollars\".",
+        "You should see \"Each person pays $35.00\" and \"Collected $140.00\"."
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "summary": "",
+      "reason": "",
+      "failedStep": null,
+      "durationS": 10,
+      "testUrl": null,
+      "shareUrl": null,
+      "credits": 0,
+      "notSignedIn": false
+    },
+    {
+      "id": "quick-tip",
+      "title": "Quick tip buttons",
+      "source": "README.md:97",
+      "steps": [
+        "Open the app.",
+        "Type \"50\" in \"Bill\" and \"2\" in \"People\".",
+        "Click the \"20%\" button.",
+        "You should see \"Each person pays $30.00\"."
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "summary": "",
+      "reason": "",
+      "failedStep": null,
+      "durationS": 9,
+      "testUrl": null,
+      "shareUrl": null,
+      "credits": 0,
+      "notSignedIn": false
+    },
+    {
+      "id": "validation",
+      "title": "Nobody to split with",
+      "source": "README.md:105",
+      "steps": [
+        "Open the app.",
+        "Type \"60\" in \"Bill\" and \"0\" in \"People\".",
+        "You should see the error \"Add at least 1 person\"."
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "summary": "",
+      "reason": "",
+      "failedStep": null,
+      "durationS": 9,
+      "testUrl": null,
+      "shareUrl": null,
+      "credits": 0,
+      "notSignedIn": false
+    },
+    {
+      "id": "share-link",
+      "title": "Share a split as a link",
+      "source": "README.md:112",
+      "steps": [
+        "Open the app.",
+        "You should see \"80\" in \"Bill\", \"20\" in \"Tip %\" and \"3\" in \"People\".",
+        "You should see \"Each person pays $32.00\"."
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "summary": "Completed the bill split calculation with an $80 bill, a 20% tip, and 3 people.\nThe page showed that each person pays $32.00.",
+      "reason": "",
+      "failedStep": null,
+      "durationS": 36,
+      "testUrl": null,
+      "shareUrl": "https://test-manager.lambdatest.com/projects/01M7FD3S92MNX3MHTN8K1PJN5D/test-cases/01M7FDD7BS9G2Y13NGH3B8X0BR/dashboard/share/US_5MTCG0OSEPCMQ88CXNKDUPZ2FP1ID0RP4ETN1TBBZEIEENL7LDDSHVJOKVH4ORM7?type=summary&agentView=true&fqdn=summary-page",
+      "credits": 24.5230425,
+      "notSignedIn": false
+    }
+  ]
+}

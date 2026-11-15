@@ -1,0 +1,59 @@
+{"type":"stream_start","cli_version":"0.10.4","surface":"testmd","pid":439515,"v":1,"ts":"2026-11-15T10:54:25.915Z"}
+{"type":"test_md_step_start","step_index":1,"heading":"1. Open the app","ref":null,"v":1,"ts":"2026-11-15T10:54:29.832Z"}
+{"type":"run_start","objective":"Open {{app_url}} and wait for the page to finish loading.","timestamp":1794740069,"environment":{"resolution":"1920x1080"},"v":1,"ts":"2026-11-15T10:54:29.854Z"}
+{"type":"step_event","index":0,"event":"replay_started","detail":"replaying 2 actions","recording_length":2,"v":1,"ts":"2026-11-15T10:54:29.855Z"}
+{"type":"step_start","index":1,"objective":"Step 1","v":1,"ts":"2026-11-15T10:54:29.855Z"}
+{"type":"step_event","index":1,"event":"screenshot","detail":"https://kaneai-playground.lambdatest.io/","v":1,"ts":"2026-11-15T10:54:29.989Z"}
+{"type":"step_event","index":1,"event":"action","detail":"Navigate to {{global.app_url}}","action_type":"navigate","success":true,"v":1,"ts":"2026-11-15T10:54:30.051Z"}
+{"type":"step_event","index":1,"event":"reasoning","detail":"Navigate to {{global.app_url}}","action_type":"navigate","v":1,"ts":"2026-11-15T10:54:30.051Z"}
+{"type":"step_end","index":1,"status":"passed","duration":0.2,"summary":"navigate: Navigate to {{global.app_url}}","ordinal":1,"id":"0-1","kind":"navigate","screenshot":"screenshot.jpg","action_id":"76571a68-97d7-40b8-afdf-c86838e9806e","v":1,"ts":"2026-11-15T10:54:30.054Z"}
+{"type":"step_start","index":2,"objective":"Step 2","v":1,"ts":"2026-11-15T10:54:30.055Z"}
+{"type":"step_event","index":2,"event":"screenshot","detail":"http://127.0.0.1:4173/","v":1,"ts":"2026-11-15T10:54:30.174Z"}
+{"type":"step_event","index":2,"event":"action","detail":"Waiting for the page to finish loading","action_type":"wait","success":true,"v":1,"ts":"2026-11-15T10:54:33.473Z"}
+{"type":"step_event","index":2,"event":"reasoning","detail":"Waiting for the page to finish loading","action_type":"wait","v":1,"ts":"2026-11-15T10:54:33.474Z"}
+{"type":"step_end","index":2,"status":"passed","duration":3.4,"summary":"wait: Waiting for the page to finish loading","ordinal":2,"id":"0-2","kind":"wait","screenshot":"screenshot.jpg","action_id":"7f9d441f-8547-4ea1-ad8a-3d6fdc9dbc88","v":1,"ts":"2026-11-15T10:54:33.474Z"}
+{"type":"run_end","run_id":"run-0","status":"passed","summary":"","reason":"replay completed","duration":3.63,"final_url":"http://127.0.0.1:4173/","actions_executed":2,"screenshot_path":"/home/box/.testmuai/kaneai/sessions/84de852b-ec1a-4463-a25b-5cbcc2fc3047/scratch/0/replay-test/screenshots/step_002.png","run_dir":"/home/box/.testmuai/kaneai/sessions/84de852b-ec1a-4463-a25b-5cbcc2fc3047/scratch/0/replay-test","total_runs":1,"context":{"memory":{},"variables":{},"pointer":""},"variables_out":{},"store_out":{},"result_code":100,"reason_code":"success.complete","v":1,"ts":"2026-11-15T10:54:33.477Z"}
+{"type":"test_md_step_end","step_index":1,"status":"passed","duration_s":3.63,"ref_kind":null,"unit_kind":null,"inlined_count":null,"failed_sub_step_index":null,"v":1,"ts":"2026-11-15T10:54:33.478Z"}
+{"type":"test_md_step_start","step_index":2,"heading":"2. Type \"120\" in \"Bill\", \"15\" in \"Tip %\" and \"4\" in \"People\"","ref":null,"v":1,"ts":"2026-11-15T10:54:33.479Z"}
+{"type":"run_start","objective":"Type \"120\" in \"Bill\", \"15\" in \"Tip %\" and \"4\" in \"People\".","timestamp":1794740073,"environment":{"resolution":"1920x1080"},"v":1,"ts":"2026-11-15T10:54:33.487Z"}
+{"type":"step_event","index":0,"event":"replay_started","detail":"replaying 4 actions","recording_length":4,"v":1,"ts":"2026-11-15T10:54:33.488Z"}
+{"type":"step_start","index":1,"objective":"Step 1","v":1,"ts":"2026-11-15T10:54:33.490Z"}
+{"type":"step_event","index":1,"event":"screenshot","detail":"http://127.0.0.1:4173/","v":1,"ts":"2026-11-15T10:54:33.547Z"}
+{"type":"step_event","index":1,"event":"action","detail":"Waiting for the queued plan to finish executing","action_type":"wait","success":true,"v":1,"ts":"2026-11-15T10:54:34.552Z"}
+{"type":"step_event","index":1,"event":"reasoning","detail":"Waiting for the queued plan to finish executing","action_type":"wait","v":1,"ts":"2026-11-15T10:54:34.552Z"}
+{"type":"step_end","index":1,"status":"passed","duration":1.1,"summary":"wait: Waiting for the queued plan to finish executing","ordinal":3,"id":"1-1","kind":"wait","screenshot":"screenshot.jpg","action_id":"fe9af64a-c729-4a8b-a8e0-b4833f88b978","v":1,"ts":"2026-11-15T10:54:34.553Z"}
+{"type":"step_start","index":2,"objective":"Step 2","v":1,"ts":"2026-11-15T10:54:34.553Z"}
+{"type":"step_event","index":2,"event":"screenshot","detail":"http://127.0.0.1:4173/","v":1,"ts":"2026-11-15T10:54:34.612Z"}
+{"type":"step_event","index":2,"event":"action","detail":"Type \"120\" into \"Bill\"","action_type":"fill","success":true,"v":1,"ts":"2026-11-15T10:54:34.719Z"}
+{"type":"step_event","index":2,"event":"reasoning","detail":"Type \"120\" into \"Bill\"","action_type":"fill","v":1,"ts":"2026-11-15T10:54:34.719Z"}
+{"type":"step_end","index":2,"status":"passed","duration":0.2,"summary":"fill: Type \"120\" into \"Bill\"","ordinal":4,"id":"1-2","kind":"fill","screenshot":"screenshot.jpg","action_id":"0c961523-88f6-40cd-939b-9d075f9aa6d1","v":1,"ts":"2026-11-15T10:54:34.777Z"}
+{"type":"step_start","index":3,"objective":"Step 3","v":1,"ts":"2026-11-15T10:54:34.777Z"}
+{"type":"step_event","index":3,"event":"screenshot","detail":"http://127.0.0.1:4173/?bill=120&tip=15&people=2","v":1,"ts":"2026-11-15T10:54:34.828Z"}
+{"type":"step_event","index":3,"event":"action","detail":"Type \"15\" into \"Tip %\"","action_type":"fill","success":true,"v":1,"ts":"2026-11-15T10:54:34.923Z"}
+{"type":"step_event","index":3,"event":"reasoning","detail":"Type \"15\" into \"Tip %\"","action_type":"fill","v":1,"ts":"2026-11-15T10:54:34.924Z"}
+{"type":"step_end","index":3,"status":"passed","duration":0.1,"summary":"fill: Type \"15\" into \"Tip %\"","ordinal":5,"id":"1-3","kind":"fill","screenshot":"screenshot.jpg","action_id":"ef3cb295-91ea-4c58-82b1-ef86c666dd90","v":1,"ts":"2026-11-15T10:54:34.978Z"}
+{"type":"step_start","index":4,"objective":"Step 4","v":1,"ts":"2026-11-15T10:54:34.978Z"}
+{"type":"step_event","index":4,"event":"screenshot","detail":"http://127.0.0.1:4173/?bill=120&tip=15&people=2","v":1,"ts":"2026-11-15T10:54:35.027Z"}
+{"type":"step_event","index":4,"event":"action","detail":"Typing 4 into People field","action_type":"fill","success":true,"v":1,"ts":"2026-11-15T10:54:35.125Z"}
+{"type":"step_event","index":4,"event":"reasoning","detail":"Typing 4 into People field","action_type":"fill","v":1,"ts":"2026-11-15T10:54:35.125Z"}
+{"type":"step_end","index":4,"status":"passed","duration":0.1,"summary":"fill: Typing 4 into People field","ordinal":6,"id":"1-4","kind":"fill","screenshot":"screenshot.jpg","action_id":"2508f7bf-49b1-4ed9-aed0-9b8eb385ab12","v":1,"ts":"2026-11-15T10:54:35.182Z"}
+{"type":"run_end","run_id":"run-1","status":"passed","summary":"","reason":"replay completed","duration":1.7,"final_url":"http://127.0.0.1:4173/?bill=120&tip=15&people=4","actions_executed":4,"screenshot_path":"/home/box/.testmuai/kaneai/sessions/84de852b-ec1a-4463-a25b-5cbcc2fc3047/scratch/1/replay-test/screenshots/step_004.png","run_dir":"/home/box/.testmuai/kaneai/sessions/84de852b-ec1a-4463-a25b-5cbcc2fc3047/scratch/1/replay-test","total_runs":1,"context":{"memory":{},"variables":{},"pointer":""},"variables_out":{},"store_out":{},"result_code":100,"reason_code":"success.complete","v":1,"ts":"2026-11-15T10:54:35.184Z"}
+{"type":"test_md_step_end","step_index":2,"status":"passed","duration_s":1.7,"ref_kind":null,"unit_kind":null,"inlined_count":null,"failed_sub_step_index":null,"v":1,"ts":"2026-11-15T10:54:35.184Z"}
+{"type":"test_md_step_start","step_index":3,"heading":"3. You should see \"Each person pays $34.50\"","ref":null,"v":1,"ts":"2026-11-15T10:54:35.185Z"}
+{"type":"run_start","objective":"Verify the page shows \"Each person pays $34.50\".","timestamp":1794740075,"environment":{"resolution":"1920x1080"},"v":1,"ts":"2026-11-15T10:54:35.189Z"}
+{"type":"step_event","index":0,"event":"replay_started","detail":"replaying 2 actions","recording_length":2,"v":1,"ts":"2026-11-15T10:54:35.190Z"}
+{"type":"step_start","index":1,"objective":"Step 1","v":1,"ts":"2026-11-15T10:54:35.192Z"}
+{"type":"step_event","index":1,"event":"screenshot","detail":"http://127.0.0.1:4173/?bill=120&tip=15&people=4","v":1,"ts":"2026-11-15T10:54:35.245Z"}
+{"type":"step_event","index":1,"event":"action","detail":"Checking whether the per-person payment text is present","action_type":"analyze","success":true,"v":1,"ts":"2026-11-15T10:54:35.262Z"}
+{"type":"step_event","index":1,"event":"reasoning","detail":"Checking whether the per-person payment text is present","action_type":"analyze","v":1,"ts":"2026-11-15T10:54:35.262Z"}
+{"type":"step_end","index":1,"status":"passed","duration":0.1,"summary":"analyze: Checking whether the per-person payment text is present","ordinal":7,"id":"2-1","kind":"analyze","screenshot":"screenshot.jpg","action_id":"c1e08d50-de2f-4300-8550-fd3a92c0d8a2","v":1,"ts":"2026-11-15T10:54:35.263Z"}
+{"type":"step_start","index":2,"objective":"Step 2","v":1,"ts":"2026-11-15T10:54:35.263Z"}
+{"type":"step_event","index":2,"event":"screenshot","detail":"http://127.0.0.1:4173/?bill=120&tip=15&people=4","v":1,"ts":"2026-11-15T10:54:35.312Z"}
+{"type":"step_event","index":2,"event":"assertion","detail":"the page shows \"Each person pays $34.50\"","passed":true,"v":1,"ts":"2026-11-15T10:54:35.313Z"}
+{"type":"step_end","index":2,"status":"passed","duration":0.1,"summary":"assert: the page shows \"Each person pays $34.50\"","ordinal":8,"id":"2-2","kind":"assert","screenshot":"screenshot.jpg","action_id":"a1dfaa55-b066-4bdf-ba5e-a21b5c42a9ff","v":1,"ts":"2026-11-15T10:54:35.314Z"}
+{"type":"run_end","run_id":"run-2","status":"passed","summary":"","reason":"replay completed","duration":0.13,"final_url":"http://127.0.0.1:4173/?bill=120&tip=15&people=4","actions_executed":2,"screenshot_path":"/home/box/.testmuai/kaneai/sessions/84de852b-ec1a-4463-a25b-5cbcc2fc3047/scratch/2/replay-test/screenshots/step_002.png","run_dir":"/home/box/.testmuai/kaneai/sessions/84de852b-ec1a-4463-a25b-5cbcc2fc3047/scratch/2/replay-test","total_runs":1,"context":{"memory":{},"variables":{"each_person_pays_34_50_visible":{"syntax":"{{each_person_pays_34_50_visible}}","value":"true","secret":false}},"pointer":""},"variables_out":{"each_person_pays_34_50_visible":{"syntax":"{{each_person_pays_34_50_visible}}","value":"true","secret":false}},"store_out":{},"result_code":100,"reason_code":"success.complete","v":1,"ts":"2026-11-15T10:54:35.317Z"}
+{"type":"test_md_step_end","step_index":3,"status":"passed","duration_s":0.13,"ref_kind":null,"unit_kind":null,"inlined_count":null,"failed_sub_step_index":null,"v":1,"ts":"2026-11-15T10:54:35.317Z"}
+{"type":"test_md_evidence_ingest","status":"ok","evidence_id":"fc001469-fcb8-403f-a39b-ea23331361f5","v":1,"ts":"2026-11-15T10:54:36.036Z"}
+{"type":"test_md_summary","overall_status":"passed","duration_s":9,"steps":{"total":3,"passed":3,"failed":0,"skipped":0,"replay_decisions":3,"author_decisions":0},"adaptive_heal":{"triggered":false},"commit":{"committed":false,"reason":"readonly_fallback"},"artifacts":{"replaced":false},"upload":{"performed":true,"succeeded":true},"cancelled":false,"v":1,"ts":"2026-11-15T10:54:36.037Z"}
+{"type":"coverage","status":"skipped","reason":"not_assurance_project","pack":"/home/box/.testmuai/kaneai/sessions/84de852b-ec1a-4463-a25b-5cbcc2fc3047/evidence/fc001469-fcb8-403f-a39b-ea23331361f5.evidence","v":1,"ts":"2026-11-15T10:54:36.040Z"}
+{"type":"test_md_done","overall_status":"passed","duration_s":9,"session_id":"84de852b-ec1a-4463-a25b-5cbcc2fc3047","coverage":{"status":"skipped"},"v":1,"ts":"2026-11-15T10:54:36.040Z"}
