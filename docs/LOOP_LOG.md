@@ -59,3 +59,30 @@ This was the expected failure: the README documented share links before the app 
 Kane: "Completed the bill split calculation with an $80 bill, a 20% tip, and 3 people. The page showed that each person pays $32.00."
 
 The four unchanged claims replayed against the changed app and still passed, so the fix broke nothing. Raw output: [`proof/latest/`](../proof/latest/). `npm run proof:replay` re-reads it without an account.
+
+## Run 3 (deployed site): 2026-11-15 11:00:25 to 11:06:08 · PASSED 5/5
+
+After deploying the fix to GitHub Pages: `node bin/docproof.mjs check --url https://good1uck.github.io/docproof/ --out tests/docproof-live`.
+A new URL means new Kane test cases, so every claim was authored from scratch in the browser, not replayed. Credits 976.82 to 885.75.
+
+| Claim | Result | Kane | Seconds | Credits | Session | Kane run |
+|---|---|---|---|---|---|---|
+| split-basic | PASS | authored 3 steps | 58 | 14.9 | 861825ba-2045-409d-9a7a-bc4cd423f34c | [Test Manager](https://test-manager.lambdatest.com/projects/01M7FD3S92MNX3MHTN8K1PJN5D/test-cases/01M7FDV5XZG45T6XWZA9X4EGRX/dashboard/share/US_RK2AVW3O9J1OWKFJJOOBZEAYIOQPCI3R60Z43050DBTVPVKGYD731HWI6Z2HIZ1M?type=summary&agentView=true&fqdn=summary-page) |
+| round-up | PASS | authored 4 steps | 71 | 13.1 | afb44801-45f1-4485-9ae2-30eb253592bf | [Test Manager](https://test-manager.lambdatest.com/projects/01M7FD3S92MNX3MHTN8K1PJN5D/test-cases/01M7FDX6DS71ZPYZE98CCCVG8J/dashboard/share/US_QMFJ54WOA26M3AWXN1NKV4IOUMV1JV4TQ67WDG2FSQDW66G3RH0QTZOFHBCMUDCV?type=summary&agentView=true&fqdn=summary-page) |
+| quick-tip | PASS | authored 4 steps | 64 | 16.7 | 25119bd9-44b4-4b06-b1d6-8dab02f52e0f | [Test Manager](https://test-manager.lambdatest.com/projects/01M7FD3S92MNX3MHTN8K1PJN5D/test-cases/01M7FDZKQAS3PNV2M71FC8TR03/dashboard/share/US_J804S3DUMJBG8Z293J0JZ7IYTPJ1GEAB6T2ONSZBM2OYCT12OYPHENI2UEPUDLEP?type=summary&agentView=true&fqdn=summary-page) |
+| validation | PASS | authored 3 steps | 51 | 14.1 | 4e882c14-4689-4c13-9e94-1cfc1dcfa58b | [Test Manager](https://test-manager.lambdatest.com/projects/01M7FD3S92MNX3MHTN8K1PJN5D/test-cases/01M7FE1TGTZZNSS0J0TMDKHFM9/dashboard/share/US_N81C7DYF2RU7WRRW1MDXGCHRQL1L3JH7GBF0EV19BXK7N136BIMMUY2YUNDUV9JO?type=summary&agentView=true&fqdn=summary-page) |
+| share-link | PASS | authored 3 steps | 49 | 12.9 | 0bc17a3c-41ea-4fc8-9b2f-1fdc4eb8a6c3 | [Test Manager](https://test-manager.lambdatest.com/projects/01M7FD3S92MNX3MHTN8K1PJN5D/test-cases/01M7FE3XHKPVW8WNHHKBSYFKM2/dashboard/share/US_32EL8IT8T8HD7SGE5OHFEJXMIA5RGZZCM5NBXNGC7L23NXQ5K4DPBY7PF23JEFNR?type=summary&agentView=true&fqdn=summary-page) |
+
+For `share-link`, Kane only read values: it opened `?bill=80&tip=20&people=3`, read the Bill, Tip % and People inputs (80, 20, 3) without typing, then checked "Each person pays $32.00". Raw output: [`proof/live/`](../proof/live/).
+
+## Summary
+
+| Run | Where | Result | Kane-authored | Replayed |
+|---|---|---|---|---|
+| 0 | local | 1/1 (smoke) | 1 | 0 |
+| 1 | local | **4/5, share-link failed** | 4 | 1 |
+| fix | agent edits `app/` from FIX_PROMPT.md | | | |
+| 2 | local | **5/5** | 1 | 4 |
+| 3 | GitHub Pages | **5/5** | 5 | 0 |
+
+Total: 1200 to 885.75 credits (about 314) for 16 Kane test runs.

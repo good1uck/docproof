@@ -1,0 +1,111 @@
+{
+  "tool": "docproof",
+  "appUrl": "https://good1uck.github.io/docproof/",
+  "startedAt": "2026-11-15T11:00:25.644Z",
+  "finishedAt": "2026-11-15T11:06:08.777Z",
+  "status": "passed",
+  "claims": [
+    {
+      "id": "split-basic",
+      "title": "Split a bill",
+      "source": "README.md:82",
+      "steps": [
+        "Open the app.",
+        "Type \"120\" in \"Bill\", \"15\" in \"Tip %\" and \"4\" in \"People\".",
+        "You should see \"Each person pays $34.50\"."
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "summary": "The bill-splitting calculator was set to a $120 bill, a 15% tip, and 4 people.\nThe page showed the final result: “Each person pays $34.50.”",
+      "reason": "",
+      "failedStep": null,
+      "durationS": 58,
+      "testUrl": null,
+      "shareUrl": "https://test-manager.lambdatest.com/projects/01M7FD3S92MNX3MHTN8K1PJN5D/test-cases/01M7FDV5XZG45T6XWZA9X4EGRX/dashboard/share/US_RK2AVW3O9J1OWKFJJOOBZEAYIOQPCI3R60Z43050DBTVPVKGYD731HWI6Z2HIZ1M?type=summary&agentView=true&fqdn=summary-page",
+      "credits": 14.8545575,
+      "notSignedIn": false
+    },
+    {
+      "id": "round-up",
+      "title": "Round up",
+      "source": "README.md:89",
+      "steps": [
+        "Open the app.",
+        "Type \"120\" in \"Bill\", \"15\" in \"Tip %\" and \"4\" in \"People\".",
+        "Tick \"Round up to whole dollars\".",
+        "You should see \"Each person pays $35.00\" and \"Collected $140.00\"."
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "summary": "Updated the bill-splitting calculator with a $120 bill, 15% tip, 4 people, and rounding enabled.\nThe payment summary showed that each person pays $35.00 and that the group collects $140.00.\nThe requested calculation was completed successfully.",
+      "reason": "",
+      "failedStep": null,
+      "durationS": 71,
+      "testUrl": null,
+      "shareUrl": "https://test-manager.lambdatest.com/projects/01M7FD3S92MNX3MHTN8K1PJN5D/test-cases/01M7FDX6DS71ZPYZE98CCCVG8J/dashboard/share/US_QMFJ54WOA26M3AWXN1NKV4IOUMV1JV4TQ67WDG2FSQDW66G3RH0QTZOFHBCMUDCV?type=summary&agentView=true&fqdn=summary-page",
+      "credits": 13.141392499999998,
+      "notSignedIn": false
+    },
+    {
+      "id": "quick-tip",
+      "title": "Quick tip buttons",
+      "source": "README.md:97",
+      "steps": [
+        "Open the app.",
+        "Type \"50\" in \"Bill\" and \"2\" in \"People\".",
+        "Click the \"20%\" button.",
+        "You should see \"Each person pays $30.00\"."
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "summary": "Calculated a bill split with a $50 bill, a 20% tip, and 2 people.\nThe calculator showed that each person pays $30.00.",
+      "reason": "",
+      "failedStep": null,
+      "durationS": 64,
+      "testUrl": null,
+      "shareUrl": "https://test-manager.lambdatest.com/projects/01M7FD3S92MNX3MHTN8K1PJN5D/test-cases/01M7FDZKQAS3PNV2M71FC8TR03/dashboard/share/US_J804S3DUMJBG8Z293J0JZ7IYTPJ1GEAB6T2ONSZBM2OYCT12OYPHENI2UEPUDLEP?type=summary&agentView=true&fqdn=summary-page",
+      "credits": 16.723921500000003,
+      "notSignedIn": false
+    },
+    {
+      "id": "validation",
+      "title": "Nobody to split with",
+      "source": "README.md:105",
+      "steps": [
+        "Open the app.",
+        "Type \"60\" in \"Bill\" and \"0\" in \"People\".",
+        "You should see the error \"Add at least 1 person\"."
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "summary": "The requested form validation was completed on the bill-splitting page.\nThe page was left with 0 people selected.\nThe page displayed the message “Add at least 1 person,” confirming that at least one person is required.",
+      "reason": "",
+      "failedStep": null,
+      "durationS": 51,
+      "testUrl": null,
+      "shareUrl": "https://test-manager.lambdatest.com/projects/01M7FD3S92MNX3MHTN8K1PJN5D/test-cases/01M7FE1TGTZZNSS0J0TMDKHFM9/dashboard/share/US_N81C7DYF2RU7WRRW1MDXGCHRQL1L3JH7GBF0EV19BXK7N136BIMMUY2YUNDUV9JO?type=summary&agentView=true&fqdn=summary-page",
+      "credits": 14.128631500000001,
+      "notSignedIn": false
+    },
+    {
+      "id": "share-link",
+      "title": "Share a split as a link",
+      "source": "README.md:112",
+      "steps": [
+        "Open the app.",
+        "You should see \"80\" in \"Bill\", \"20\" in \"Tip %\" and \"3\" in \"People\".",
+        "You should see \"Each person pays $32.00\"."
+      ],
+      "status": "passed",
+      "exitCode": 0,
+      "summary": "Calculated a bill split with an $80 bill, 20% tip, and 3 people.\nThe bill summary showed that each person pays $32.00.",
+      "reason": "",
+      "failedStep": null,
+      "durationS": 49,
+      "testUrl": null,
+      "shareUrl": "https://test-manager.lambdatest.com/projects/01M7FD3S92MNX3MHTN8K1PJN5D/test-cases/01M7FE3XHKPVW8WNHHKBSYFKM2/dashboard/share/US_32EL8IT8T8HD7SGE5OHFEJXMIA5RGZZCM5NBXNGC7L23NXQ5K4DPBY7PF23JEFNR?type=summary&agentView=true&fqdn=summary-page",
+      "credits": 12.867985000000001,
+      "notSignedIn": false
+    }
+  ]
+}
